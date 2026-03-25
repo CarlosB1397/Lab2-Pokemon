@@ -9,11 +9,10 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
     })
     .then(data => {
         data.results.forEach(pokemon => {
-            sugerencias.innerHTML =
-            `
-                <p>${pokemon.name}</p>
-            `;
+            pokemones += `<p>Nombre: ${pokemon.name}</p>`;
         });
+        sugerencias.innerHTML =
+            pokemones;
         
         console.log(data.results);
     })
