@@ -20,7 +20,7 @@ export class Pokemon{
     }
 
     obtenerAltura(){
-        return `Altura Pokémon: ${this.nombre}`;
+        return `Altura Pokémon: ${this.altura}`;
     }
 
 }//fin clase
