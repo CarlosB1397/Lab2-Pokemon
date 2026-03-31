@@ -1,26 +1,33 @@
-export class Pokemon{
-    
-    constructor(nombre,id,tipo,altura){
-        this.nombre=nombre;
-        this.id=id;
-        this.tipo=tipo;
-        this.altura=altura;
+export class Pokemon {
+
+    constructor(nombre, id, tipo, altura) {
+        this.nombre = nombre;
+        this.id = id;
+        this.tipo = tipo;
+        this.altura = altura;
     }
 
-    obtenerNombre(){
-        return `Nombre Pokémon: ${this.nombre}`;
+    getNombre() {
+        return this.nombre;
     }
 
-    obtenerId(){
-        return `Id Pokémon: ${this.id}`;
+    getId() {
+        return this.id;
     }
 
-    obtenerTipo(){
-        return `Tipo Pokémon: ${this.tipo}`;
+    getTipo() {
+        return this.tipo;
     }
 
-    obtenerAltura(){
-        return `Altura Pokémon: ${this.altura}`;
+    getAltura() {
+        return this.altura;
+    }
+
+    getInformacion() {
+        return `Nombre:${this.nombre}
+     Id:${this.id}
+     Tipo:${this.tipo}
+     Altura:${this.altura}`;
     }
 
 }//fin clase
