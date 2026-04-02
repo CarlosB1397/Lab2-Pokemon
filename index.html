@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo API Pokemon</title>
-    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script type="module" src="./js/data/servicio.js"></script>
   </head>
   <body>
     <header>
@@ -14,14 +15,17 @@
       <section id="busqueda">
         <input type="text" id="pokemonName" placeholder="Ingrese el nombre del Pokemon" />
         <button id="btnBuscar">Buscar Pokemon</button>
-        <button id="btnGuardar">Capturar Pokemon</button>
+        <button id="btnGuardar">Guardar Pokemon</button>
         <button id="btnLeer">Leer</button>
         <div id="pokemonData"></div>
       </section>
       <section id="infoPokemon">
         <p>Información del Pokemon</p>
       </section>
+      <section id="sugerencias">
+
+      </section>
     </main>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="./js/data/renderizar.js"></script>
   </body>
 </html>
