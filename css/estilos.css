@@ -1,0 +1,24 @@
+.cargando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+} /*contenedor del spinner*/
+
+.spinner{
+    width: 40px; 
+    height: 40px;
+    border: 4px solid #000000;
+    border-top: 4px solid #ffffff;
+    border-radius: 100%;
+    animation: girar 1s linear infinite;
+}/*forma del spinner*/
+
+@keyframes girar{ /*el keyframes sirve para controlar la animacion*/
+    from {
+        transform: rotate(0deg); /*inicia en 0 grados*/
+    }
+    to{
+        transform: rotate(360deg); /*hace un giro de 360 grados*/
+    }
+}
