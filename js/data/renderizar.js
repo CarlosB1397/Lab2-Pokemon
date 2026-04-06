@@ -30,7 +30,7 @@ btnBuscar.addEventListener("click", async () => {
   const inputNombrePokemon = await document
     .getElementById("pokemonName")
     .value.toLowerCase();
-  sectionInfoPokemon.innerHTML = "<p>Buscando pókemon....</p>";
+  
   try {
     const respuesta = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${inputNombrePokemon}`,
