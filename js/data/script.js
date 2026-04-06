@@ -9,10 +9,11 @@ export class Guardar {
       } //si el pokemon ya esta guardado, mostramos una alerta y salimos de la funcion
     } //si el pokemon no esta guardado, lo agregamos al array de pokemones actuales
     const todos = [...pokemonesActuales, ...pokemones];
-    localStorage.setItem(this.KEY, JSON.stringify(todos));
-    alert("Pokemon guardado correctamente en el Pokedex");
     if (todos.length > 6) {
       alert("No puedes guardar más de 6 pokemones en el Pokedex");
+    } else {
+      localStorage.setItem(this.KEY, JSON.stringify(todos));
+      alert("Pokemon guardado correctamente en el Pokedex");
     } //si el numero de pokemones guardados es mayor a 6, mostramos una alerta
   } //fin guardarPokemones
 
