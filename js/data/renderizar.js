@@ -91,6 +91,8 @@ async function mostrarCartasQuemadas(cartas) {
                     <h4>Id: ${datos.id}</h4>
                 </div>
             `;
+            carta.style.background = obtenerColor(datos.types[0].type.name);
+
 
             contenedorCartas.appendChild(carta);
 
@@ -98,4 +100,22 @@ async function mostrarCartasQuemadas(cartas) {
             console.error(error);
         }
     }
+
+    
+
+    function obtenerColor(tipoPokemon) {
+
+        if (tipoPokemon === "water") {
+            return "#2601f5";
+        } else if (tipoPokemon === "fire") {
+            return "#ff0b0b";
+        } else if (tipoPokemon === "electric") {
+            return "#f5dd01";
+        } else if (tipoPokemon== "grass"){
+            return "#01f501";
+        } else {
+            return "#ffffff"; // El color por defecto
+        }
+    } //método tipo de color 
+
 }
