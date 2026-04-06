@@ -3,7 +3,6 @@ import { Guardar } from "./script.js";
 const btnBuscar = document.getElementById("btnBuscar");
 const btnGuardar = document.getElementById("btnGuardar");
 const sectionInfoPokemon = document.getElementById("infoPokemon");
-const cuerpo = document.body;
 const btnLeer = document.getElementById("btnLeer");
 const contenedorCartas = document.getElementById("cartasQuemadas");
 
