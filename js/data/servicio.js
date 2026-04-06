@@ -1,3 +1,5 @@
+import { Pokemon } from "./Pokemon.js";
+
 const sugerencias = document.getElementById('sugerencias');
 let pokemones = '<h1>Pokemones sugeridos</h1><div class="pokemon-grid">';
 
@@ -10,14 +12,15 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
     .then(async data => {
         for (const pokemon of data.results) {
             const pokemonInfo = await obtenerInfo(pokemon.name);
+            let pokemonInstance = Pokemon.crearPokemon(pokemonInfo);
             pokemones += 
             `
                 <article class="pokemon-card">
-                    <img src="${pokemonInfo.sprites.other['official-artwork'].front_default}" alt="${pokemonInfo.name}">
-                    <h2>${pokemonInfo.name}</h2>
-                    <p>Tipo: ${pokemonInfo.types[0].type.name}</p>
-                    <p>Altura: ${pokemonInfo.height}</p>
-                    <p>ID: ${pokemonInfo.id}</p>
+                    <img src="${pokemonInstance.getImagen()}" alt="${pokemonInfo.name}">
+                    <h2>${pokemonInstance.nombre}</h2>
+                    <p>Tipo: ${pokemonInstance.getTipo()}</p>
+                    <p>Altura: ${pokemonInstance.getAltura()}</p>
+                    <p>ID: ${pokemonInstance.getId()}</p>
                 </article>
             `;
         }
