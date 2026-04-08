@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo API Pokemon</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/estiloSpinner.css"/>
+  <script type="module" src="./js/data/servicio.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Búsqueda de Pókemon</h1>
+  </header>
+  <main>
+    <section id="busqueda">
+
+      <input type="text" id="pokemonName" placeholder="Ingrese el nombre del Pokemon" />
+      <button id="btnBuscar">Buscar Pókemon</button>
+      <button id="btnGuardar">Guardar Pókemon</button>
+      <button id="btnLeer">Leer</button>
+      <div id="pokemonData"></div>
+    </section>
+    <section id="infoPokemon">
+      <p>Información del Pókemon</p>
+    </section>
+    <section id="cartasQuemadas">
+
+    </section>
+    <section id="sugerencias">
+
+    </section>
+    <section id="cartasQuemadas">
+
+    </section>
+  </main>
+  <script type="module" src="./js/data/renderizar.js"></script>
+  <script type="module"  src="./js/data/animacion.js"></script>
+</body>
+
+</html>
